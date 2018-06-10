@@ -1,0 +1,48 @@
+.conteiner{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+		}
+		.tower{
+			width: 150px;
+			height: 200px;
+			background-color: #f2f2f2;
+			border:1px solid black;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			/*flex-direction: column;*/
+			align-items: flex-end;
+		}
+		.tower:after{
+			content: "";
+			background-color: black;
+			width: 5px;
+			height: 200px;
+			position: absolute;
+			left:50%;
+		}
+		.hanoi{
+			z-index: 2;
+			position: absolute;
+			height: 15px;
+		}
+		.hanoi.q{
+			background-color: red;
+
+		}
+		.hanoi.w{
+			background-color: orange;
+		}
+		.hanoi.e{
+			background-color: yellow;
+		}
+		.hanoi.r{
+			background-color: green;
+		}
+		.hanoi.t{
+			background-color: purple;
+		}
+		.hanoi.y{
+			background-color: blue;
+		}
