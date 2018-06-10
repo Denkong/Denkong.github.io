@@ -51,11 +51,7 @@
 		 });
 	}
 
-
-
-
 $(document).ready(function() {
-
 	$('#Count').change(function(event) {
 			$(".tower.q").empty();
 			$(".tower.w").empty();
@@ -68,10 +64,7 @@ $(document).ready(function() {
 		HanoiClickEvent();
 		TowerClickEvent();
 	});
-
 addHanoi(CountTower);
 HanoiClickEvent();
 TowerClickEvent();
-
-
 });

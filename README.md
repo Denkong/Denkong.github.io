@@ -33,56 +33,62 @@ CSS:
 
 ```
 
-## Running the tests
+## StarBattle
 
-Explain how to run the automated tests for this system
+JavaScript игра, реализованная с помощью HTML5 Canvas и ООП составляющей JS.
 
-### Break down into end to end tests
+### Как играть?
 
-Explain what these tests test and why
+W,A,S,D или ←, →, ↑, ↓ - управление кораблем
+пробел - выстрелы
+p - пауза/продолжение
 
-```
-Give an example
-```
+### Что делать?
 
-### And coding style tests
+Убивать вражеские корабли, не трогать своих, собирать топливо, стать лучшим.
 
-Explain what these tests test and why
+### Как подключит таблицу рекордов?
 
-```
-Give an example
-```
+Вам предоставлен файл "StarBattle.sql", используйте его для импорта в БД.
+Не забудьте поменять параметры подключение к БД в файлах "register.php" и "show_result.php", они отвечают за вывод таблицы рекордов и запись.
 
-## Deployment
+## Tajam
 
-Add additional notes about how to deploy this on a live system
+Сайт компании "Tajam". Выполненный из PSD шаблона.
 
-## Built With
+## OneTown
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+Сайт компании ".ONETOWN". Верстка требует доработки мобильной версии сайта.
 
-## Contributing
+## Fishing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+JavaScript игра, реализованная с помощью HTML5 Canvas и ООП составляющей JS.
 
-## Versioning
+### Как играть?
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+Мышкой
 
-## Authors
+### Что делать?
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+Кликать на рыбок, получать очки, стать лучшим.
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+## TowerHanoi
 
-## License
+JavaScript игра "Ханойская башня" - одна из самых популярных головоломок XIX века, реализованная на JS. 
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+### Как играть?
 
-## Acknowledgments
+Мышкой
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+### Что делать?
+
+Даны три стержня, на один из которых нанизаны n-ое количество колец, причём кольца отличаются размером и лежат меньшее на большем. Задача состоит в том, чтобы перенести пирамиду из восьми колец за наименьшее число ходов на другой стержень. За один раз разрешается переносить только одно кольцо, причём нельзя класть большее кольцо на меньшее.
+
+## CSS
+
+В этой директории будут располагаться интересные вещи на CSS, которые, возможно, будут использоваться в дальнейшем. Некоторые вещи могут не работать в браузерах и на мобильных устройствах.
+
+## JS-slider
+
+Простой в написании, удобный слайдер на JS.
+
