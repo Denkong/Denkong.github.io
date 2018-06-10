@@ -1,0 +1,11 @@
+.conteiner{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 928px;
+}
+#canvas{
+	width: 900px;
+	height: 600px;
+	
+}
