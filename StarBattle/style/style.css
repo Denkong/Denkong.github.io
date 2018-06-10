@@ -1,0 +1,181 @@
+*{
+	padding: 0px;
+	margin:0px;
+    border: 0px;
+}
+
+#gamezone{
+     height: 100%;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    display:none;
+}
+#canvasZone{
+position: relative;
+}
+#endgame{
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    flex-direction: column;
+    top:0;
+    width: 100%;
+    height: 100%;   
+    min-width: 600px;
+    display: none;
+    background-color: rgba(255,255,255,0.6);
+    text-align: center;
+
+}
+#name{
+    margin:15px;
+    padding: 10px;
+}
+#ok{
+    width: 100px;
+    padding: 10px;
+background-color: cadetblue;
+margin-bottom: 15px;  
+}
+#ok:hover{
+   background-color: #ff9600;
+  cursor: pointer;
+}
+input[type='button']:hover{
+  background-color: #ff9600;
+  cursor: pointer;
+}
+.look_leaders{
+
+    padding: 10px;
+background-color: cadetblue;
+}
+#pauseplay{
+    background-image: url(../images/pause.png);
+     background-size: cover;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 0px;
+    left:0px;
+}
+#soundONOFF{
+    background-image: url(../images/soundON.png);
+     background-size: cover;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 0px;
+    right:0px;
+}
+
+#startdiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 600px;
+    height: 100%;
+    flex-direction: column;
+}
+#instruction{
+    margin-bottom: 10px;
+    }
+#start{
+    color: #fff; 
+    background: rgb(212,75,56);
+    width:100px;
+    height: 50px;
+    cursor: pointer;
+margin: 10px;
+    position: relative;  /*Чтобы after отображался относительня этого*/
+    overflow: hidden; /*показывает только области внутри div*/
+}
+#start:hover{
+   background: #f19e0d;
+}
+#start:hover:after {
+   animation: ripple 3s;
+}
+#start:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, .1);
+  border-radius: 100%;
+}
+@keyframes ripple { /*Потом вызывается в animation*/
+  from {
+    transform: scale(0);
+    opacity: 1;
+    background: rgba(255, 255, 255, .1);
+  }
+  to{
+    opacity: 0;
+    transform: scale(100);
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+.how_play{
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px;
+}
+.mobile_not_work{
+  display: none;
+}
+.mobile_not_work img{
+  margin: 20px;
+}
+
+@media (max-width: 1000px){
+  #startdiv{
+    display: none;
+  }
+
+  .mobile_not_work{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+  }
+}
+
+#results{
+
+  position: absolute;
+  display: none;
+  background-color: #919799;
+  color: white;
+  top: 5;
+  right: 85;  
+  margin: auto;
+  width: 200px;
+  height: 253px;
+}
+#results tr{
+color: #801919;
+}
+#results td{
+border: 1px solid black;
+padding: 1px 15px 0px 24px;
+}
+.show_lead{
+  background: url('../images/Lead.svg') center no-repeat;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+#endgame button{
+  padding: 10px;
+  background: cadetblue;
+  cursor:pointer;
+  width: 100px;
+}

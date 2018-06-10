@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" charset="width=device-width;initial-scale=1;">
+		<meta name="description" content="Игры Звездная битва">
+		<meta name="keywords" content="игра, JavaScript, Звездная Битва" />
+		<title>Shooter 2D</title>
+		<script src="jquery-3.3.1.min.js"></script>
+		<script src="keyLogger.js"></script>
+		<script src="player.js"></script>
+		<script src="bullets.js"></script>
+		<script src="bulletsEnemy.js"></script>
+		<script src="targets.js"></script>
+		<script src="friendship.js"></script>
+		<script src="asteroid.js"></script>
+		<script src="planet.js"></script>
+		<script src="Fuel.js"></script>
+		<script src="utils.js"></script>
+		<script src="main.js"></script>
+		 <link rel="stylesheet" href="style/style.css">
+	</head>
+	<body>
+		<div class="mobile_not_work">
+			<img src="images/no-work.png" alt="">
+			Sorry, the game does not work on your device
+		</div>
+
+		<div id="startdiv">
+			<img src="images/logo-01.png" alt="">
+			
+				<div class="how_play">How to Play Star Battle.</div>
+<div id='instruction'>
+1. Move the spaceship using the sensible areas in the screen;<br>
+2. The timer present the time lapsed;<br>
+3. The fuel counter show the remain fuel;<br>
+4. During the flight, the spaceship needs to destroy the asteroids and enemy spaceships that are presented in the space;<br>
+5. You can shoot pressing Space Bar;<br>
+6. If the spaceship hits a asteroid or another spaceship, you lose 15 points of fuel;<br>
+7. Enemy spaceship needs 1 shot to be destroyed, you will get 5 points for each enemy destroyed;<br>
+8. Asteroid needs 2 shots to be destroyed, you will get 10 points for each asteroid destroyed;<br>
+9. If you destroy a friendly spaceship, you lose 10 points;<br>
+10. During the flight, the spaceship needs to collect fuel in the space;<br>
+11. You can pause the game clicking in a button pause, or pressing the letter "p";<br>
+12. Go beyond all limits;<br>
+Battle in Space with Star Battle Championship...
+			</div>
+			<button id="start" onclick="init();">Start Game</button>
+			
+			<div class="show_lead" onclick="getLead();" title="Leaders"></div>
+		</div>
+		
+		<div id="gamezone">
+				<div id="canvasZone">
+					<canvas id="canvas" width="960" height="600"></canvas>		
+					<button id="pauseplay"></button>
+					<button id="soundONOFF"></button>
+				</div>
+		</div>
+		<div id="endgame">
+			<p>You lose!<br>You can save your result using the form below.</p>
+			<input id="name" type="text" name="name" onKeyUp="change()" placeholder="Your nickname">
+			<input id="ok" type="button" name="ok" value="Save results" disabled onclick="getDate();">
+			<div class="show_lead" onclick="getLead();" title="Leaders"></div>
+			<p>Or you can play again.</p>
+			<button onclick="location.reload();">Play again</button>
+		</div>
+		<div id="results"></div>
+	</body>
+</html>
