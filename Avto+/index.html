@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<meta charset="utf-8">
+	<title>Авто+</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+		<!-- ШАПКА САЙТА -->
+		<header>
+			<div class="header_wrap">
+				<div class="logo">
+					<img src="images/logo.png" alt="">
+				</div>
+				<div class="number">
+					<p class="numberphone">Тел.: +7(999)999-99-00</p>
+				</div>
+				<div class="menu">
+					<ul>
+						<li ><a href="" class="active">Главная</a></li>
+						<li><a href="">Категории</a></li>
+						<li><a href="">Контакты</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<!--ФОРМА СВЯЗИ  -->
+		<div class="window">
+			<div class="window_wrap">
+				<form method="post" action="#">
+				<h2>Введите ваш номер телефона</h2><br>
+				<p class="description">Мы свяжемся с вами в ближайшее время.</p><br>
+				<input type="text" placeholder="8-(9**)-***-**-**"> <br><br>
+				<input type="submit" value="Отправить">
+			</form>
+			</div>
+		</div>
+
+		<!-- ИНФОРМАЦИЯ О КОМПАНИИ -->
+		<div class="info">
+			<hr>
+				<div class="info_wrap">
+					<h2>Информация о компании</h2><br>
+				<p>Компания "Авто+" вот уже 10 лет продаёт автомобили. Наш ассортимент разнообразен и включает в себя автомобили разных категорий: от мотоциклов до грузовиков.
+				<br>Покупая авто у нас, вы получаете 2 года гарантии. 
+				</p>
+				</div>
+			</div>
+		
+		<!-- СПИСОК АВТОМОБИЛЕЙ -->
+		 <div class="auto">
+      <h3>Каталог автомобилей</h3>
+      <!-- МЕНЮ КАТЕГОРИИ АВТОМОБИЛЕЙ -->
+      <div class="menuList">
+          <div class="item"><label for="all"><b>Все</b></label></div>
+          <div class="item">
+              <b>Легковые</b>
+              <span>
+                  <label for="lexus">Lexus</label>
+                  <label for="audi">Audi</label>
+                  <label for="bmw">BMW</label>
+                  <label for="mers">Mercedes-Benz</label>
+              </span>
+          </div>
+          <div class="item">
+              <b>Грузовые</b>
+              <span>
+                  <label for="kamaz">КамАЗ</label>
+                  <label for="hyundai">Hyundai</label>
+                  <label for="gaz">ГАЗ</label>
+              </span>
+          </div>
+          <div class="item"><label for="moto"><b>Мотоциклы</b></label></div>
+      </div>
+
+      <!-- БЛОК С АВТОМОБИЛЯМИ -->
+      <div class="auto_content">
+
+          <!-- RADIOBOXES FOR MENU -->
+          <input type="radio" name="radiobox" id="all"  checked />
+          <input type="radio" name="radiobox" id="lexus" />
+          <input type="radio" name="radiobox" id="audi" />
+          <input type="radio" name="radiobox" id="bmw" />
+          <input type="radio" name="radiobox" id="mers" />
+          <input type="radio" name="radiobox" id="kamaz" />
+          <input type="radio" name="radiobox" id="hyundai" />
+          <input type="radio" name="radiobox" id="gaz" />
+          <input type="radio" name="radiobox" id="moto" />
+
+          <!-- ОТДЕЛЬНЫЕ БЛОКИ АВТОМОБИЛЕЙ -->
+          <div class="auto_item lexus">
+          	<div class="auto_item_inner">	
+                <span class="title"><b>Легковые автомобили Lexus</b></span>
+                <div class="auto_card">
+                    <div class="auto_name">Lexus ES VI 250</div>
+                    <div class="auto_year">2010</div>
+                    <div class="auto_price">1 315 000 р.</div>
+                    <img src="./images/auto/1.jpg" alt="Auto" />
+                </div>
+                <div class="auto_card">
+                    <div class="auto_name">Lexus LS IV 460</div>
+                    <div class="auto_year">2009</div>
+                    <div class="auto_price">888 000 р.</div>
+                    <img src="./images/auto/2.jpg" alt="Auto" />
+                </div>
+                <div class="auto_card">
+                    <div class="auto_name">Lexus LX III</div>
+                    <div class="auto_year">2015</div>
+                    <div class="auto_price">5 088 000 р.</div>
+                    <img src="./images/auto/3.jpg" alt="Auto" />
+                </div>
+          	</div>
+          </div>
+          <div class="auto_item audi">
+          	<div class="auto_item_inner">	
+                <span class="title"><b>Легковые автомобили Audi</b></span>
+                <div class="auto_card">
+                    <div class="auto_name">Audi A3 III</div>
+                    <div class="auto_year">2016</div>
+                    <div class="auto_price">1 200 000 р.</div>
+                    <img src="./images/auto/4.jpg" alt="Auto" />
+                </div>
+                <div class="auto_card">
+                    <div class="auto_name">Audi A5</div>
+                    <div class="auto_year">2012</div>
+                    <div class="auto_price">1 200 000 р.</div>
+                    <img src="./images/auto/5.jpg" alt="Auto" />
+                </div>
+                <div class="auto_card">
+                    <div class="auto_name">Audi Q5</div>
+                    <div class="auto_year">2016</div>
+                    <div class="auto_price">2 800 000 р.</div>
+                    <img src="./images/auto/6.jpg" alt="Auto" />
+                </div>
+                <div class="auto_card">
+                    <div class="auto_name">Audi Q7 I</div>
+                    <div class="auto_year">2007</div>
+                    <div class="auto_price">825 000 р.</div>
+                    <img src="./images/auto/7.jpg" alt="Auto" />
+                </div>
+            </div>
+          </div>
+          <div class="auto_item bmw">
+          	<div class="auto_item_inner">	
+              <span class="title"><b>Легковые автомобили BMW</b></span>
+              <div class="auto_card">
+                  <div class="auto_name">BMW 2er Cabrio M</div>
+                  <div class="auto_year">2014</div>
+                  <div class="auto_price">1 200 000 р.</div>
+                  <img src="./images/auto/8.jpg" alt="Auto" />
+              </div>
+              <div class="auto_card">
+                  <div class="auto_name">BMW X5 III</div>
+                  <div class="auto_year">2014</div>
+                  <div class="auto_price">3 600 000 р.</div>
+                  <img src="./images/auto/9.jpg" alt="Auto" />
+              </div>
+              <div class="auto_card">
+                  <div class="auto_name">BMW X6 M I</div>
+                  <div class="auto_year">2011</div>
+                  <div class="auto_price">2 400 000 р.</div>
+                  <img src="./images/auto/10.jpg" alt="Auto" />
+              </div>
+            </div>
+          </div>
+          <div class="auto_item w50 mers">
+          	<div class="auto_item_inner">	
+              <span class="title"><b>Легковые автомобили Mercedes-Benz</b></span>
+              <div class="auto_card">
+                  <div class="auto_name">Mercedes-Benz C-klasse IV</div>
+                  <div class="auto_year">2015</div>
+                  <div class="auto_price">1 900 000 р.</div>
+                  <img src="./images/auto/11.jpg" alt="Auto" />
+              </div>
+              <div class="auto_card">
+                  <div class="auto_name">Mercedes-Benz GLE 300</div>
+                  <div class="auto_year">2016</div>
+                  <div class="auto_price">5 100 000 р.</div>
+                  <img src="./images/auto/12.png" alt="Auto" />
+              </div>
+            </div>
+          </div>
+          <div class="auto_item w50 hyundai">
+          	<div class="auto_item_inner">	
+              <span class="title"><b>Грузовые автомобили Hyundai</b></span>
+              <div class="auto_card">
+                  <div class="auto_name">Hyundai HD78</div>
+                  <div class="auto_year">2016</div>
+                  <div class="auto_price">2 300 000 р.</div>
+                  <img src="./images/auto/13.jpg" alt="Auto" />
+              </div>
+              <div class="auto_card">
+                  <div class="auto_name">Hyundai HD120</div>
+                  <div class="auto_year">2013</div>
+                  <div class="auto_price">1 800 000 р.</div>
+                  <img src="./images/auto/14.jpg" alt="Auto" />
+              </div>
+            </div>
+          </div>
+          <div class="auto_item w50 gaz">
+          	<div class="auto_item_inner">	
+              <span class="title"><b>Грузовые автомобили ГАЗ</b></span>
+              <div class="auto_card">
+                  <div class="auto_name">ГАЗ 2784</div>
+                  <div class="auto_year">2009</div>
+                  <div class="auto_price">310 000 р.</div>
+                  <img src="./images/auto/15.jpg" alt="Auto" />
+              </div>
+              <div class="auto_card">
+                  <div class="auto_name">ГАЗ 3307</div>
+                  <div class="auto_year">2004</div>
+                  <div class="auto_price">310 000 р.</div>
+                  <img src="./images/auto/16.jpg" alt="Auto" />
+              </div>
+            </div>
+          </div>
+          <div class="auto_item w50 kamaz">
+          	<div class="auto_item_inner">	
+              <span class="title"><b>Грузовые автомобили КамАЗ</b></span>
+              <div class="auto_card">
+                  <div class="auto_name">КамАЗ 6511</div>
+                  <div class="auto_year">2013</div>
+                  <div class="auto_price">1 990 000 р.</div>
+                  <img src="./images/auto/17.jpg" alt="Auto" />
+              </div>
+              <div class="auto_card">
+                  <div class="auto_name">КамАЗ 6520</div>
+                  <div class="auto_year">2016</div>
+                  <div class="auto_price">5 000 000 р.</div>
+                  <img src="./images/auto/18.jpg" alt="Auto" />
+              </div>
+            </div>
+          </div>
+          <div class="auto_item moto">
+          	<div class="auto_item_inner">	
+              <span class="title"><b>Мотоциклы</b></span>
+              <div class="auto_card">
+                  <div class="auto_name">Ducati Monster 1100</div>
+                  <div class="auto_year">2012</div>
+                  <div class="auto_price">600 000 р.</div>
+                  <img src="./images/auto/19.jpg" alt="Auto" />
+              </div>
+              <div class="auto_card">
+                  <div class="auto_name">Harley-Davidson CVO</div>
+                  <div class="auto_year">2015</div>
+                  <div class="auto_price">2 310 000 р.</div>
+                  <img src="./images/auto/20.jpg" alt="Auto" />
+              </div>
+              <div class="auto_card">
+                  <div class="auto_name">Honda CBR 600 RR</div>
+                  <div class="auto_year">2005</div>
+                  <div class="auto_price">210 000 р.</div>
+                  <img src="./images/auto/21.jpg" alt="Auto" />
+              </div>
+              <div class="auto_card">
+                  <div class="auto_name">Honda CBR 1000</div>
+                  <div class="auto_year">2008</div>
+                  <div class="auto_price">439 000 р.</div>
+                  <img src="./images/auto/22.jpg" alt="Auto" />
+              </div>
+              <div class="auto_card">
+                  <div class="auto_name">Suzuki RM-Z 250</div>
+                  <div class="auto_year">2013</div>
+                  <div class="auto_price">230 000 р.</div>
+                  <img src="./images/auto/23.jpg" alt="Auto" />
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+
+	<!-- ПОДВАЛ САЙТА -->
+	<footer>
+			<div class="footer_wrap">
+				<div class="social">
+					<img src="images/vk.png" alt="">
+					<img src="images/twitter.png" alt="">
+					<img src="images/fc.png" alt="">
+				</div>
+				<div class="number">
+					<p class="numberphone">Тел.: +7(999)999-99-00</p>
+				</div>
+				<div class="menu">
+					<ul>
+						<li><a href="" class="active">Главная</a></li>
+						<li><a href="">Категории</a></li>
+						<li><a href="">Контакты</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+</div>
+</body>
+</html>

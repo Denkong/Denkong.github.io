@@ -1,0 +1,355 @@
+/*Общие настройки*/
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Trebuchet MS;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+hr {
+	border: 1px #ff9600 solid;
+}
+
+.wrap{
+    width: 100%;
+    height: 100%;
+}
+
+/*Шапка (логотип, меню, контакты)*/
+header {
+	width: 100%;
+	float: left;
+	background-color: #2a2a2a;
+	padding: 1% 0;
+}
+
+.header_wrap {
+	width: 80%;
+	margin: auto;
+}
+
+.logo {
+	float: left;
+    min-width: 105px;
+	width: 30%;
+}
+
+.logo img {
+	width:130px;
+}
+
+.number, .menu {
+	float: right;
+}
+
+.numberphone {
+	display: block;
+	color: white;
+	font-style: italic;
+	font-weight: bold;
+	padding: 7px 0 0 10px;
+}
+
+.menu li {
+	display: inline-block;
+	margin: 0 25px 0 0;
+	padding: 7px 0;
+
+}
+
+.menu a {
+	color: gray;
+}
+
+.menu a:hover {
+	color: white;
+}
+
+a.active {
+	color: white;
+}
+
+
+
+/*Форма обратной связи*/
+
+.window {
+	width: 100%;
+	float: left;
+	background-image: url('../images/bg.jpg');
+	background-position-y: 30%;
+	padding: 5% 0;
+
+}
+
+.window_wrap {
+	width: 80%;
+	margin: auto;
+	text-align: center;
+}
+
+input[type="text"] {
+    width: 300px;
+	height: 50px;
+	font-size: 21px;
+	padding: 5px 15px;
+	font-style: italic;
+}
+
+input[type="submit"] {
+	background: none;
+	border: 2px #ff9600 solid;
+	border-radius: 15px;
+	padding: 20px;
+	color: white;
+	font-size: 18px;
+}
+input[type="submit"]:hover {
+	background: #ff9600;
+	opacity: 0.9;
+	cursor: pointer;
+
+}
+.window h2 {
+	color: white;
+	font-size: 36px;
+}
+.window p {
+    color: white;
+    min-width: 200px;
+    width: 40%;
+	margin: auto;
+}
+
+/*О компании*/
+
+.info {
+	background-color: #2a2a2a;
+	float: left;
+	width: 100%;
+	text-align: justify;
+}
+
+.info_wrap {
+	width: 80%;
+	margin: auto;
+	color: silver;
+	padding: 2%;
+}
+
+.info_wrap h2 {
+	color: white;
+}
+
+.info_wrap p {
+	line-height: 24px;
+}
+
+/*Контент*/
+.auto {
+    width: 100%;
+    float: left;
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;*/
+    padding: 50px 0;
+}
+
+.auto h3, .about h3 {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px 35px;
+    background: #2a2a2a;
+    font-size: 28px;
+    letter-spacing: -1px;
+    color: white;
+    margin-bottom: 50px;
+    border: 2px #ff9600 solid;
+}
+
+.item span {
+    position: absolute;
+    top: 65px;
+    width: 100%;
+    left: 0;
+    display: none;
+}
+.item span label {
+    width: 100%;
+    float: left;
+}
+.item span label:hover {
+    background: #ff9600;
+    cursor: pointer;
+}
+.menuList .item {
+    background: #2a2a2a;
+    z-index: 5;
+    color: white;
+    width: 25%;
+    float: left;
+    text-align: center;
+    height: 65px;
+    line-height: 65px;
+    position: relative;
+}
+.menuList .item:hover {
+    background: #ff9900;
+    cursor: pointer;
+}
+.item:hover span {
+    display: block;
+    background: #a0a0a0;
+}
+.auto input {
+    display: none;
+}
+.auto_content {
+    color: white;
+    width: 100%;
+}
+.auto_content input {
+    display: none;
+}
+.auto_item {
+    width: 100%;
+    float: left;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    /*padding: 50px;*/
+}
+.auto_item_inner{
+	padding: 25px;
+}
+.auto_item b {
+    padding: 20px 35px;
+    background: #2a2a2a;
+    float: left;
+}
+.title {
+    width: 100%;
+    float: left;
+    margin-bottom: 25px;
+}
+.auto_card {
+    float: left;
+    /*width: 300px;*/
+    position: relative;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    /*min-height: 200px;*/
+}
+.auto_card img {
+    width: 320px;
+    float: left;
+    height: 230px;
+}
+.auto_name {
+    float: left;
+    height: 50px;
+    line-height:50px;
+    background: rgba(0,0,0,0.5);
+    padding: 0 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.auto_year {
+    float: right;
+    height: 50px;
+    line-height:50px;
+    background: rgba(0,0,0,0.5);
+    padding: 0 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.auto_price {
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    height: 50px;
+    line-height:50px;
+    background: rgba(0,0,0,0.5);
+    /*padding: 0 20px;*/
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.auto label {
+    width: 100%;
+    float: left;
+    cursor: pointer;
+}
+
+/* Интерактивность */
+
+
+#lexus:checked ~ :not(.lexus) {
+    display: none;
+}
+#audi:checked ~ :not(.audi) {
+    display: none;
+}
+#bmw:checked ~ :not(.bmw) {
+    display: none;
+}
+#mers:checked ~ :not(.mers) {
+    display: none;
+}
+
+#kamaz:checked ~ :not(.kamaz) {
+    display: none;
+}
+#hyundai:checked ~ :not(.hyundai) {
+    display: none;
+}
+#gaz:checked ~ :not(.gaz) {
+    display: none;
+}
+
+#moto:checked ~ :not(.moto) {
+    display: none;
+}
+
+/*Подвал*/
+
+footer {
+	width: 100%;
+	float: left;
+	background-color: #2a2a2a;
+	padding: 1% 0;
+}
+
+.footer_wrap {
+	width: 90%;
+	margin: auto;
+}
+
+footer li {
+	display: inline-block;
+	margin: 0 30px 0 0;
+	padding: 7px 0;
+
+}
+
+.social {
+    width: 125px;
+	float: left;
+}
+
+.social img {
+	width: 25%;
+	margin: 0 5% 0 0;
+}
+
+
