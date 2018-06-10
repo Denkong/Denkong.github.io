@@ -1,36 +1,37 @@
 # Denkong.github.io
 
-One Paragraph of project description goes here
+Список сайтов и подробное описание вы можете найти здесь.
+Все сайты/игры не являются коммерческими проектами и были реализованы с целью тренировки, саморазвития и в качестве подготовки к соревнованию по "Веб-дизайну и разработке".
+Большинство, из присутствующих здесь сайтов были реализованы в режиме "SpeedRun", на верстку сайтов уходило в среднем 2ч-4ч, на создание игр от 30мин до 6ч.
+Поэтому код может быть не сконструирован, содержать неосмысленные комментарии.
+Вы всегда можете связаться со мной:
+* dimitriew11@mail.ru
+* [VK](https://vk.com/denisdimitriew)
 
-## Getting Started
+## Avto+
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Сайт компании "Авто+", занимающейся продажей автомобилей. Основная задача при создании сайта - реализовать проект только при помощи HTML и CSS. Также к вашим услугам предоставлен исходник векторного логотипа.
 
-### Prerequisites
+### Реализация задач
 
-What things you need to install the software and how to install them
+Стояла задача:
+* При клике на элемент категории, в блоке автомобилей должны отобразиться только элементы находящиеся в этой категории
+* Все интерактивные действия должны происходить без обновления страницы и без помощи iframe
 
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
+Выполнено с помощью:
 
 ```
-until finished
-```
 
-End with an example of getting some data out of the system or using it for a little demo
+HTML:
+<input type="radio" name="radiobox" id="lexus" />
+<label for="lexus">Lexus</label>
+
+CSS:
+#lexus:checked ~ :not(.lexus) {
+    display: none;
+}
+
+```
 
 ## Running the tests
 
