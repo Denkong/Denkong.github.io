@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<meta charset="utf-8">
+	<title>Funny Island</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script type="text/javascript" src="js.js"></script>
+</head>
+<body>
+<div class="wrap">
+<!-- ШАПКА -->
+<header>
+  <div class="main-menu">
+      <ul>
+        <li class="menu-selected">About</li>
+        <li>Investors</li>
+        <li>Careers</li>
+        <li>Environment</li>
+        <li>EN / SE /NO /FI</li>
+      </ul>
+  </div>
+  <div class="backgraund-picture">
+      <div class="backgraund-picture-name">
+        Funny Island
+      </div>
+
+  </div>
+</header>
+<hr>
+
+<!-- ТЕЛО -->
+<section class="main-conteiner">
+  <div class="menu">
+        <ul>
+          <li><img src="images/1.png" alt=""><label for="Promotion">Promotion</label></li>
+          <li><img src="images/2.png" alt=""><label for="Tickets">Tickets</label></li>
+          <li><img src="images/3.png" alt=""><label for="Attraction">Attraction</label></li>
+          <li><img src="images/4.png" alt=""><label for="Financial">Financial Report</label></li>
+          <li><img src="images/5.png" alt=""><label for="About">About Company</label></li>
+          <li><img src="images/6.png" alt=""><label for="Careers">Careers</label></li>
+          <li><img src="images/7.png" alt=""><label for="Events">Events & News</label></li>
+        </ul>
+  </div>
+  <div class="main_body">
+      <div class="conteiner">
+          <input type="radio" name="menu" id="Promotion">
+          <input type="radio" name="menu" id="Tickets">
+          <input type="radio" name="menu" id="Attraction">
+          <input type="radio" name="menu" id="Financial">
+          <input type="radio" name="menu" id="About">
+          <input type="radio" name="menu" id="Careers">
+          <input type="radio" name="menu" id="Events">
+          <!-- Promotion -->
+          <div class="Promotion">
+            <div class="name"><img src="images/1.png" alt="">2 adults, 1 kid free promotion during December</div>
+            
+            <img src="images/Promo.jpg" alt="" class="promo">
+          </div>
+          <!-- Tickets -->
+          <div class="Tickets">
+              <div class="name"><img src="images/2.png" alt="">Tickets and admission</div>
+              <div class="desc">Amount of Guests</div>
+              <div class="man-conteiner">
+                
+                <div class="man">
+                  Adult:<br>
+                <select name="Adult" id="Adult">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+                </div>
+                <div class="man">
+                  Children:<br>
+                <select name="Children" id="Children">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+                </div>
+                <div class="man">
+                  Senior:<br>
+                <select name="Senior" id="Senior">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+                </div>
+              </div>
+            
+            <form action="form-handler.php" method="POST">
+              <div class="section" id="sectionForAdult">
+                <!-- <div class="section_container">
+                  <div class="section_inner">Adult 1<br><input type="text"><br><input type="checkbox" id="FastPass1"><label for="FastPass1">+ Fast Pass >></label></div>
+                  <div class="ticket"><div class="ticket_name" id=>Name</div></div>
+                </div> -->
+               
+              </div>
+              <div class="section" id="sectionForChild">
+              </div>
+              <div class="section" id="sectionForSenior">
+              </div>
+            <input type="submit" value="Checkout and confirm the tickets">
+            </form>
+          </div>
+          <!-- Attraction -->
+          <div class="Attraction">
+            <div class="name"><img src="images/3.png" alt="">Attraction</div>
+            <div class="fotosbox">
+            <div class="attrblock">
+              <img src="images/atr4.jpg" alt="" class="attrImg" id="attrImg1">
+              <div class="attrblockname">Enjoy the night</div>
+            </div>
+            <div class="attrblock">
+              <img src="images/atr2.jpg" alt="" class="attrImg" id="attrImg2">
+              <div class="attrblockname">Park in birdview</div>
+            </div>
+            <div class="attrblock">
+              <img src="images/atr1.jpeg" alt="" class="attrImg" id="attrImg3">
+              <div class="attrblockname">Crazy tower!</div>
+            </div>
+            <div class="attrblock">
+              <img src="images/atr3.jpg" alt="" class="attrImg" id="attrImg4">
+              <div class="attrblockname">Roller coster</div>
+            </div>
+            </div>
+          </div>
+          <!-- Financial -->
+          <div class="Financial">
+            <div class="name"><img src="images/4.png" alt="">Financial Report</div>
+            <div class="FinancialBlock">
+              <div class="FinancialBlockDesc">FUNI as of 13:45,1st December, 2016:<br>
+              Pricing delayed by 15 min.</div>
+              <div class="Price" id="Price"></div>
+            </div>
+            <div class="FinancialButton">
+            <button>Download Q3 Financial Report</button>
+            </div>
+          </div>
+          <!-- About -->
+          <div class="About">
+            <div class="name"><img src="images/5.png" alt="">About</div>
+            <div class="desc">We have 3 theme parks in Scandinavia</div>
+            <div id="Stockholm">1.Stockholm</div>
+            <div id="Gothenburg">2.Gothenburg</div>
+            <div id="Oslo">3.Oslo</div>
+              
+            
+            <img src="images/map.png" class="map">
+            <div class="mapMarkup" id="mapMarkup1"></div>
+            <div class="mapMarkup" id="mapMarkup2"></div>
+            <div class="mapMarkup" id="mapMarkup3"></div>
+          </div>
+          <!-- Careers -->
+          <div class="Careers">
+            <div class="name"><img src="images/6.png" alt="">Careers</div>
+            <div class="desc" id="countjobs"></div>
+            <div class="fotosbox" id="careersbox"></div>
+            <div class="careerssend">Plese send you cover letter and resume via email: funnyisland@example.com.<br>
+            Learn more about our benefits</div>
+          </div>
+
+          <!-- Events -->
+          <div class="Events">
+            <div class="name"><img src="images/7.png" alt="">Events&News</div>
+              <div class="news">
+                  <div class="newsDate">2016-12-01</div>
+                  <div class="newsDesc">Upcoming theme park opening is Lisbon in 2018</div>
+              </div>
+              <div class="news">
+                  <div class="newsDate">2016-12-01</div>
+                  <div class="newsDesc">Upcoming theme park opening is Lisbon in 2018</div>
+              </div>
+              <div class="news">
+                  <div class="newsDate">2016-12-01</div>
+                  <div class="newsDesc">Upcoming theme park opening is Lisbon in 2018</div>
+              </div>
+          </div>
+      </div>
+    </div>
+</section>
+<div class="secret">
+  <div class="CRIMSON"></div>
+  <div class="REBECCAPURPLE"></div>
+  <div class="SKYBLUE"></div>
+  <div class="OLIVEDRAB"></div>
+  <div class="YELLOWGREEN"></div>
+  <div class="GOLD"></div>
+  <div class="TOMATO"></div>
+  <div class="BLACK"></div>
+</div>
+<div class="secretCode">
+</div>
+<!-- ПОДВАЛ -->
+<footer>
+  <div class="footer_text">text</div>
+</footer>
+
+</div>
+</body>
+</html>

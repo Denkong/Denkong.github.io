@@ -1,0 +1,390 @@
+/*Общие настройки*/
+@font-face{
+font-family: 'Alegreya_Sans';
+src: url('../font/AlegreyaSans-Black.ttf');
+}
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Alegreya_Sans;
+}
+
+ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.wrap{
+    width: 100%;
+    height: 100%;
+}
+
+/*ШАПКА*/
+.main-menu{
+	background-color: black;
+	color:white;
+}
+.main-menu ul{
+	display: flex;
+	justify-content:   center;
+}
+.main-menu li{
+	padding: 15px;
+	border-left: 1px  dotted;
+	border-right: 1px dotted;
+}
+.menu-selected{
+	background-color: gray;
+}
+.backgraund-picture{
+	padding-top: 100px;
+ background: url(../images/back1.jpeg) no-repeat;
+	height: 400px;
+background-size:  cover;
+background-position-x: 50%;
+    background-position-y: 20%;
+}
+
+.backgraund-picture-name{
+	background-color: rgba(255,255,255,0.9);
+	margin: 0 auto;
+	width: 200px;
+	text-align: center;
+	color: black;
+	padding: 0.5em 1em 0.5em 1em;	
+}
+
+/*ТЕЛО*/
+.main-conteiner{
+	background-color: white;
+	margin: 0 auto;
+	width: 900px;
+	margin-top: -100px;
+	min-height: 700px;
+	border: 1px solid;
+}
+
+.menu ul{
+	display: flex;
+		justify-content:    space-evenly;
+}
+.menu li{
+	width: 150px;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+}
+.menu li img{
+	
+}
+.menu li:nth-of-type(1){
+	border-bottom: 3px solid CRIMSON;
+}
+.menu li:nth-of-type(1):hover{
+	border-bottom: 5px solid CRIMSON;
+	/*color:CRIMSON;
+	background-color: CRIMSON;*/
+}
+.menu li:nth-of-type(1):hover img{
+	margin-bottom: 5%;
+}
+.menu li:nth-of-type(2){
+	border-bottom: 3px solid TOMATO;
+}
+.menu li:nth-of-type(2):hover{
+	border-bottom: 5px solid TOMATO;
+	/*color:CRIMSON;
+	background-color: CRIMSON;*/
+}
+.menu li:nth-of-type(3){
+	border-bottom: 3px solid GOLD;
+}
+.menu li:nth-of-type(3):hover{
+	border-bottom: 5px solid GOLD;
+	/*color:CRIMSON;
+	background-color: CRIMSON;*/
+}
+.menu li:nth-of-type(4){
+	border-bottom: 3px solid YELLOWGREEN;
+}
+.menu li:nth-of-type(4):hover{
+	border-bottom: 5px solid YELLOWGREEN;
+	/*color:CRIMSON;
+	background-color: CRIMSON;*/
+}
+.menu li:nth-of-type(5){
+	border-bottom: 3px solid OLIVEDRAB;
+}
+.menu li:nth-of-type(5):hover{
+	border-bottom: 5px solid OLIVEDRAB;
+	/*color:CRIMSON;
+	background-color: CRIMSON;*/
+}
+.menu li:nth-of-type(6){
+	border-bottom: 3px solid SKYBLUE;
+}
+.menu li:nth-of-type(6):hover{
+	border-bottom: 5px solid SKYBLUE;
+	/*color:CRIMSON;
+	background-color: CRIMSON;*/
+}
+.menu li:nth-of-type(7){
+	border-bottom: 3px solid REBECCAPURPLE;
+}
+.menu li:nth-of-type(7):hover{
+	border-bottom: 5px solid REBECCAPURPLE;
+	/*color:CRIMSON;
+	background-color: CRIMSON;*/
+}
+/*Контейнер*/
+.main_body{
+	padding: 10px;
+}
+.name{
+	font-weight: bold;
+}
+.desc{
+	
+}
+.conteiner input[type="radio"]{
+	display: none;
+}
+
+#Promotion:checked ~ :not(.Promotion) {
+	display: none;
+}
+#Tickets:checked ~ :not(.Tickets) {
+	display: none;
+}
+#Attraction:checked ~ :not(.Attraction) {
+	display: none;
+}
+#Financial:checked ~ :not(.Financial) {
+	display: none;
+}
+#About:checked ~ :not(.About) {
+	display: none;
+}
+#Careers:checked ~ :not(.Careers) {
+	display: none;
+}
+#Events:checked ~ :not(.Events) {
+	display: none;
+}
+/*Promotion*/
+.promo{
+	width: 100%;
+	margin-top: 10px;
+}
+/*TICKETS*/
+.man-conteiner{
+	display: flex;
+	justify-content:   space-between;
+}
+.man{
+	width: 300px
+}
+.man select{
+	width: 250px;
+	height: 30px;
+}
+
+.section{
+	margin-top: 20px;
+}
+.section_container{
+	display: flex;
+	justify-content: space-between;
+}
+.section_inner{
+	height: 100px;
+}
+.section_inner input[type="text"]{
+	height: 25px;
+	width: 300px;
+}
+.ticket{
+	width: 300px;
+	height:100px;
+	/*! background: url(../images/ticket1.png) no-repeat; */
+	background-size: contain;
+	background-image: url(../images/ticket1.png);
+	background-repeat: no-repeat;
+	position: relative;
+}
+.ticket_name{
+	position: absolute;
+	top: 45px;
+	left: 20px;
+}
+.conteiner input[type="submit"]{
+	width: 100%;
+	height: 35px;
+}
+
+/*ATTRACTION*/
+.fotosbox{
+	display: flex;
+	flex-wrap: wrap;
+}
+.attrblock{
+width: 50%;
+height: 300px;
+position: relative;
+}
+
+.attrImg{
+	width: 100%;
+height: 100%;
+}
+.attrblockname{
+	position: absolute;
+background-color: rgba(255,255,255,0.8);
+padding: 10px;
+bottom: 10px;
+left: 20px;
+}
+.attrblock:nth-of-type(1) img{
+filter: Brightness(70%);
+}
+.attrblock:nth-of-type(2) img{
+filter:Sepia(100%);
+}
+.attrblock:nth-of-type(3) img{
+filter:Grayscale(60%);
+}
+.attrblock:nth-of-type(4) img{
+filter:Hue-rotate(290deg);
+}
+.attrblock img:hover{
+	filter: none;
+}
+.attrblock:hover .attrblockname{
+	background-color: rgba(255,255,255,1);
+	border-bottom: 5px solid gold;
+	
+}
+/*About company*/
+.About{
+	    position: relative;
+    min-height: 700px;
+}
+.map{
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+}
+.mapMarkup{
+width: 12px;
+height: 12px;
+	background-color: CRIMSON;
+	position: absolute;
+}
+#mapMarkup1{
+bottom: 340px;
+	right: 276px;
+}
+#mapMarkup2{
+bottom: 308px;
+right: 324px;
+}
+#mapMarkup3{
+bottom: 356px;
+right: 340px;
+}
+/*News*/
+.newsDate{
+font-weight: bolt;
+}
+.newsDesc{
+color: cornflowerblue;
+}
+
+/*secret*/
+.secret{
+    height: 2px;
+    width: 2px;
+    margin: 0 auto;
+    margin-top: 30px;
+    position: relative;
+}
+.secret div{
+    width: 2px;
+    height: 2px;
+    position: absolute;
+}
+.BLACK{
+    background-color: black;
+
+}
+.TOMATO{
+	background-color: TOMATO;
+}
+.GOLD{
+	background-color: GOLD;
+}
+.YELLOWGREEN{
+	background-color: YELLOWGREEN;
+}
+.OLIVEDRAB{
+	background-color: OLIVEDRAB;
+}
+.SKYBLUE{
+	background-color: SKYBLUE;
+}
+.CRIMSON{
+	background-color: CRIMSON;
+}
+.REBECCAPURPLE{
+	background-color: REBECCAPURPLE;
+}
+.secretCode{
+		width: 300px;
+    margin: 0 auto;
+    background-color: aqua;
+    display: none;
+}
+
+/*Financial*/
+.FinancialBlock{
+	display: flex;
+	justify-content: center;
+}
+.FinancialBlockDesc{
+	text-align: right;
+	margin-right: 15px;
+}
+.Price{
+	text-align: center;
+	font-size: 25pt;
+}
+.FinancialButton{
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
+}
+.FinancialButton button{
+  width: 100%;
+  height: 100%;
+}
+
+/*ПОДВАЛ*/
+footer{
+	height: 100px;
+	background: url(../images/Footer-2x.png);	
+  background-repeat: repeat-x;
+	margin: 50px 0px 0px 0px;
+}
+.footer_text{
+	margin: 0 auto;
+	width: 100px;
+	
+	text-align: center;
+	color: white;
+	padding-top: 40px;
+}
