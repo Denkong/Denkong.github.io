@@ -1,84 +1,25 @@
 import * as React from "react";
-import { GraphModel, Node, Link } from "../graph-model";
+import { GraphModel } from "../graph-model";
 
 interface Props {
   model: GraphModel;
 }
+
 /**
- * Начальное значение Вершин
+ * Размер прямоугольника
  */
-const Nodes: Node[] = [
-  {
-    label: "node0",
-    pos: [156, 51],
-    color: "#99ffff"
-  },
-  {
-    label: "node1",
-    pos: [34, 188],
-    color: "#99FF00"
-  },
-  {
-    label: "node2",
-    pos: [295, 291],
-    color: "#ff9600"
-  },
-  {
-    label: "node3",
-    pos: [273, 125],
-    color: "#99ff99"
-  },
-  {
-    label: "node4",
-    pos: [416, 283],
-    color: "#99ff99"
-  },
-  {
-    label: "node5",
-    pos: [168, 288],
-    color: "#99ff99"
-  }
-];
-/**
- * Начальные значение Связей между узлами
- */
-const Links: Link[] = [
-  {
-    from: 1,
-    to: 0
-  },
-  {
-    from: 3,
-    to: 2
-  },
-  {
-    from: 3,
-    to: 5
-  },
-  {
-    from: 3,
-    to: 4
-  }
-];
+const setting = {
+  RectW: 50,
+  RectH: 30
+};
 
 export class GraphView extends React.Component<Props, {}> {
   private myRef = React.createRef<HTMLCanvasElement>();
-  private selectElement: { label: string; x: number; y: number };
 
   componentDidMount() {
-    // Устанавливаем начальные значение
-    this.props.model.setNodesAndLinks(Nodes, Links, this.myRef
-      .current as HTMLCanvasElement);
+    this.renderNodesandLinks();
   }
 
-  /**
-   * Кнопка мыши нажата над элементом.
-   * Если прошла проверка на позицию щелчка и элемента,
-   * то устанавливает selectElement
-   *
-   * @param {e} React.MouseEvent
-   * @return {void}
-   */
   CanvasDown = (e: React.MouseEvent): void => {
     const myCanvas = this.myRef.current as HTMLCanvasElement;
     const rect: any = myCanvas.getBoundingClientRect();
@@ -86,36 +27,20 @@ export class GraphView extends React.Component<Props, {}> {
       x: e.clientX - rect.left,
       y: e.clientY - rect.top
     };
-    const element = this.props.model.checkClick(mousePos) as Node;
+
+    const element = this.props.model.checkClick(mousePos);
+
     if (element) {
-      this.selectElement = {
-        label: element.label,
-        x: element.pos[0],
-        y: element.pos[1]
-      };
+      this.props.model.setSelectedElement(element);
     }
   };
 
-  /**
-   * Кнопка мыши отпущена над элементом.
-   * Если в перемнной selectElement есть элемент,
-   * то переменная очищается
-   *
-   * @return {void}
-   */
   CanvasUp = (): void => {
-    if (this.selectElement) {
-      delete this.selectElement;
+    if (this.props.model.getSelectedElement()) {
+      this.props.model.deleteSelectedElement();
     }
   };
-  /**
-   * Каждое движение мыши над элементом генерирует это событие.
-   * Если в перемнной selectElement есть элемент,
-   * то контрол начинает отображать переданные новые узлы и связи
-   *
-   * @param {e} React.MouseEvent
-   * @return {void}
-   */
+
   CanvasMove = (e: React.MouseEvent): void => {
     const myCanvas = this.myRef.current as HTMLCanvasElement;
     const rect: any = myCanvas.getBoundingClientRect();
@@ -123,20 +48,57 @@ export class GraphView extends React.Component<Props, {}> {
       x: e.clientX - rect.left,
       y: e.clientY - rect.top
     };
-
-    if (this.selectElement) {
-      const NewNodes = this.props.model.getNodes().map(node => {
-        if (node.label === this.selectElement.label) {
-          return { ...node, pos: [mousePos.x, mousePos.y] };
-        }
-        return node;
-      });
-      this.props.model.setNodesAndLinks(
-        NewNodes,
-        this.props.model.getLinks(),
-        this.myRef.current as HTMLCanvasElement
+    const SelectedNode = this.props.model.getSelectedElement();
+    const allNodes = this.props.model.getNodes();
+    if (SelectedNode) {
+      const SelectedNodeIndex = allNodes.findIndex(
+        node => node.label === SelectedNode.label
       );
+      const newNode = {
+        ...SelectedNode,
+        pos: [mousePos.x, mousePos.y]
+      };
+      this.props.model.changeNode(SelectedNodeIndex, newNode);
+      this.renderNodesandLinks();
     }
+  };
+
+  renderNodesandLinks = () => {
+    const myCanvas: HTMLCanvasElement = this.myRef.current as HTMLCanvasElement;
+    const ctx: CanvasRenderingContext2D = myCanvas.getContext(
+      "2d"
+    ) as CanvasRenderingContext2D;
+
+    myCanvas.width = myCanvas.offsetWidth;
+    myCanvas.height = myCanvas.offsetHeight;
+
+    const allNodes = this.props.model.getNodes();
+    const allLinks = this.props.model.getLinks();
+    // отрисовываем узлы графа
+    allNodes.forEach(node => {
+      ctx.fillStyle = node.color;
+      ctx.fillRect(
+        node.pos[0] - setting.RectW / 2,
+        node.pos[1] - setting.RectH / 2,
+        setting.RectW,
+        setting.RectH
+      );
+      ctx.fillStyle = "black";
+      ctx.font = "12px Georgia";
+      ctx.fillText(
+        node.label,
+        node.pos[0] - setting.RectW / 2,
+        node.pos[1] + setting.RectH / 2
+      );
+    });
+    // отрисовываем связи
+    allLinks.forEach(link => {
+      ctx.beginPath();
+      ctx.strokeStyle = "red";
+      ctx.moveTo(allNodes[link.from].pos[0], allNodes[link.from].pos[1]);
+      ctx.lineTo(allNodes[link.to].pos[0], allNodes[link.to].pos[1]);
+      ctx.stroke();
+    });
   };
 
   showAllLink = (): void => {
